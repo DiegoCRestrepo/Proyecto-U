@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Variables</title>
+</head>
+<body>
+    <h1>Consultar Variables por Tipo de Dato</h1>
+
+    <form method="POST" action="/variables">
+        <label for="tipo_dato">Seleccione el tipo de dato:</label>
+        <select name="tipo_dato" id="tipo_dato" required>
+            <option value="entero">Entero</option>
+            <option value="real">Real</option>
+            <option value="cadena">Cadena</option>
+            <option value="lógico">Lógico</option>
+            <option value="fecha">Fecha</option>
+        </select>
+        <button type="submit">Consultar</button>
+    </form>
+
+    {% if tipo_dato %}
+    <h2>Variables para el tipo de dato: {{ tipo_dato }}</h2>
+    <ul>
+        {% for variable in variables %}
+        <li>{{ variable }}</li>
+        {% else %}
+        <p>No hay variables declaradas para este tipo de dato.</p>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <a href="/">Volver a la página principal</a>
+</body>
+</html>

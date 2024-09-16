@@ -1,0 +1,10 @@
+python -m venv venv
+
+venv\Scripts\actívate
+
+pip install flask
+
+
+EN VISUAL STUDIO CODE
+
+python app.py

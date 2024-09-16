@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Sentencias</title>
+</head>
+<body>
+    <h1>Validador de Declaraciones de Variables</h1>
+    <form method="POST" action="/">
+        <label for="sentencia">Ingrese la sentencia:</label>
+        <input type="text" name="sentencia" id="sentencia" required>
+        <button type="submit">Validar</button>
+    </form>
+    <p>{{ resultado }}</p>
+
+    <!-- Enlace para consultar variables por tipo de dato -->
+    <a href="/variables">Consultar variables por tipo de dato</a>
+</body>
+</html>
